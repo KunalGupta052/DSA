@@ -6,10 +6,10 @@ int main() {
 
     // If n is completely divisible by 2
     if (n % 2 == 0)
-        cout << "Even";
+        cout << "EVEN";
 
     // If n is NOT completely divisible by 2
     else
-        cout << "Odd";
+        cout << "ODD";
     return 0;
 }
