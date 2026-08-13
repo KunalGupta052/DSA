@@ -1,0 +1,14 @@
+1 byte ranggeg i sfrom -127 to 127
+user defined DType:
+class 
+struct
+enumeration
+
+wchar_t : it contains all language charachters ,it range is too high
+static : i n it i not need to delete form memory
+heap : manually need to delete 
+
+can't run : cout << *(&P)
+
+&arr[0] == arr
+address of st elmt of aar is sme a saddress of array
