@@ -106,17 +106,17 @@ Write your code in this editor and press "Run" button to compile and execute it.
 // #include<bits/stdc++.h>
 // using namespace std;
 // int main(){
-//     int n;
+//     float n;
 //     cin>>n;
-//     int a;
+//     float a;
 //     cin>>a;
-//     int b;
-//     b = log(a);
+//     float b;
+//     b = log(n)/log(a);
 //     cout<<b;
    
     
 //     return 0;
-// }
+// }   
 
 //  Count digits of a number: Count the number of digits in an integer N.
 // #include<bits/stdc++.h>
