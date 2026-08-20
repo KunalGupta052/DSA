@@ -128,6 +128,22 @@ Write your code in this editor and press "Run" button to compile and execute it.
     
 // }
 
-
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a=5;
+    int b=10;
+    int *ptr1 = &a;
+    int *ptr2 = &b;
+    int temp;
+    
+    
+    temp = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = temp;
+    
+    cout<<*ptr1<<" , "<<*ptr2;
+    return 0;
+}
 
 
