@@ -189,24 +189,24 @@ Write your code in this editor and press "Run" button to compile and execute it.
 // }
 
 
-// POinter Arithematic with Characters:
-//Declare a character variable ch and a pointer ptr pointing to it. Increment the pointer by 1 and print the address and value of ch.
+// Pointer Arithematic with Multiplication Variables:
 // #include<bits/stdc++.h>
 // using namespace std;
 // int main(){
     
-//     char ch='a';
-//     char *ptr = &ch;
+//     int a,b,c;
     
-//     ptr+=1;
+//     int *ptr1 = &a;
+//     int *ptr2 = &b;
+//     int *ptr3 = &c;
     
-//     cout<<*ptr<<endl;
-//     cout<<&ch<<endl;
-//     cout<<ch;
+//     cout<<*ptr1<<endl;
+//     cout<<*ptr2<<endl;
+//     cout<<*ptr3;
+    
     
     
 //     return 0;
-    
 // }
 
 
