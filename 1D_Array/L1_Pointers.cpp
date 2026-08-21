@@ -146,4 +146,130 @@ int main(){
     return 0;
 }
 
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+//10. Pointer decrement
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int x=10;
+    
+//     int *ptr = &x;
+//     cout<<*ptr<<endl;
+//     ptr--;
+    
+//     cout<<*ptr<<endl;
+//     cout<<x;
+
+//     return 0;
+// }
+
+// // Pointer Arithematic with Multiplication Variables:
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+    
+//     int a,b,c;
+    
+//     int *ptr = &a;
+//     int *ptr = &b;
+//     int *ptr = &c;
+    
+//     cout<<*ptr;
+    
+    
+    
+//     return 0;
+// }
+
+
+// POinter Arithematic with Characters:
+//Declare a character variable ch and a pointer ptr pointing to it. Increment the pointer by 1 and print the address and value of ch.
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+    
+//     char ch='a';
+//     char *ptr = &ch;
+    
+//     ptr+=1;
+    
+//     cout<<*ptr<<endl;
+//     cout<<&ch<<endl;
+//     cout<<ch;
+    
+    
+//     return 0;
+    
+// }
+
+
+
+//13.  Manipulating Pointer Value : 
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+    
+//     int num=10;
+//     int *ptr=&num;
+    
+//     for(int i=1; i<=10; i++){
+//         *ptr+=1;
+//     }
+//     cout<<*ptr;
+    
+    
+//     return 0;
+// }
+
+
+
+//14. pOinter Comparision
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+    
+//     int a,b;
+//     int *ptr1 = &a;
+//     int *ptr2 = &b;
+    
+//     if(*ptr1 == *ptr2){
+//         cout<<"They are Equal";
+        
+//     }
+//     else{
+//         cout<<"They are not Equal";
+//     }
+    
+//     return 0;
+// }
+
+
+//15.Add and subtrct using pointer Arithematic:
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    
+    int a,b;
+    int *ptr1 = &a;
+    int *ptr2 = &b;
+    
+    cout<<*ptr1 + *ptr2<<endl;
+    cout<<(*ptr1 - *ptr2)<<endl;
+    
+    cout<<abs(*ptr1 - *ptr2);
+    
+    
+    
+    
+    return 0;
+}
+
 
