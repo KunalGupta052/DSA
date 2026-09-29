@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Account{
+    public:
+        float salary =  60000;
+        
+};
+
+class programmer: public Account{
+    public:
+        float bonus = 10000;
+        // cout<<"salary inside account class";
+        
+};
+
+int main()
+{
+    programmer p1;
+    cout<<"salary: "<<p1.salary<<endl;
+    cout<<"Bonus: " <<p1.bonus;
+
+    return 0;
+}
