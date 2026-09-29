@@ -1,0 +1,78 @@
+
+// 1. Get dimensions
+// 2. Check A and B dimensions
+// 3. Create C
+// 4. Traverse both
+// 5. Add corresponding elements
+// 6. Return C
+#include <bits/stdc++.h>
+using namespace std;
+
+class solution{
+    public:
+        vector<vector<int>> matrixSum(vector<vector<int>> &A, vector<vector<int>> &B){
+            
+            
+            if(A.size() != B.size() || A[0].size() != B[0].size()) {
+                return {};
+            }
+            
+            int rows =A.size();
+            int cols = A[0].size();
+            
+            
+            
+            
+            
+            vector<vector<int>> C(rows, vector<int>(cols));
+            
+            for(int i=0; i< rows; i++){
+                for(int j=0; j< cols; j++){
+                    C[i][j] = A[i][j] + B[i][j];
+                }
+            }
+            return C;
+            
+        }
+
+};
+int main() {
+
+    int rows, cols;
+
+    // Take dimensions
+    cin >> rows >> cols;
+
+    vector<vector<int>> A(rows, vector<int>(cols));
+    vector<vector<int>> B(rows, vector<int>(cols));
+
+    // Input Matrix A
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < cols; j++) {
+            cin >> A[i][j];
+        }
+    }
+
+    // Input Matrix B
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < cols; j++) {
+            cin >> B[i][j];
+        }
+    }
+
+    // Create object
+    Solution obj;
+
+    // Call function
+    vector<vector<int>> C = obj.matrixSum(A, B);
+
+    // Print result
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < cols; j++) {
+            cout << C[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
