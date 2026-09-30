@@ -1,0 +1,155 @@
+// #include <iostream>
+// using namespace std;
+
+// class A{
+//     protected:
+//         int a;
+//     public:
+//         void get_a(int n){
+//             a = n;
+//         }
+// };
+
+// class B{
+//     protected:
+//          int b;
+//         public:
+//             void get_b(int n){
+//                 b=n;
+//             }
+// };
+// class C: public A ,public B{
+//     public:
+//         void display(){
+//             cout<<"The value of a is:"<<a<<endl;
+//             cout<<"The value of b is:"<<b<<endl;
+//             cout<<"The value of a+b is:"<<a+b<<endl;
+//         }
+        
+// };
+// int main()
+// {
+//     C c;
+//     c.get_a(10);
+//     c.get_b(20);
+//     c.display();
+    
+
+//     return 0;
+// }
+
+
+
+// //Ambiguity
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// class A{
+//     public:
+//         void display(){
+//             cout<<"class A"<<endl;
+//         }
+// };
+
+// class B{
+//     public:
+//         void display(){
+//             cout<<"class B"<<endl;
+//         }
+// };
+
+// class C: public A, public B{
+//     public:
+//         void view(){
+//             A::display();
+//             B::display();
+//         }
+// };
+
+
+// int main(){
+    
+//     C c;
+//     c.view();
+//     //both display function will call at the same time so this will create an ambiguity 
+//     //so to resolve this we use scope resolution operator(::)
+//     return 0;
+    
+    
+// }
+
+//multilevel inheritance
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// class Animal{
+//     public:
+//     void eat(){
+//         cout<<"Eating"<<endl;
+        
+//     }
+    
+// };
+
+// class Dog:public Animal{
+//     public:
+//     void bark(){
+        
+//     }
+// }
+// int main(){
+    
+    
+//     return 0;
+// }
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class A{
+    public:
+        A(){
+            cout<<"A is constructor"<<endl;
+        }
+        ~A(){
+            cout<<"A is distructor"<<endl;
+        }
+        
+    
+        
+};
+class B{
+    public:
+        B(){
+            cout<<"B is constructor"<<endl;
+        }
+        ~B(){
+            cout<<"B is distructor"<<endl;
+        }
+    
+        
+};
+class C{
+    public:
+        C(){
+            cout<<"C is constructor"<<endl;
+        }
+        ~C(){
+            cout<<"C is distructor"<<endl;
+        }
+    
+        
+};
+
+
+int main(){
+    A obj1;
+    B obj2;
+    C obj3;
+    
+    // return A;
+    
+    return 0;
+}
