@@ -44,3 +44,28 @@ int main()
 
     return 0;
 }
+//leetcode 3
+class Solution {
+public:
+    int lengthOfLongestSubstring(string S) {
+        vector<bool>count(256, 0);
+        int first = 0;
+        int second = 0;
+        int len = 0;
+        
+        while(second<S.size()){
+            while(count[S[second]] >0){
+                count[S[first]]=0;
+                first++;
+            }
+
+            count[S[second]] = 1;
+            len = max(len, second-first+1);
+            second++;
+
+        }
+        return len;
+
+        
+    }
+};
