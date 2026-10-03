@@ -117,3 +117,21 @@ public:
     return true;
     }
 };
+
+//LEETCODE_169
+class Solution{
+    public:
+        int majorityElement(vector<int>& nums){
+            unordered_map<int, int>hm;
+
+            for(int x: nums){
+                hm[x]++;
+            }
+            for(int x : nums){
+                if(hm[x]>nums.size()/2)
+                   return x; 
+                    
+            };
+            return {};
+        }
+};
