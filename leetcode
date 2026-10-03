@@ -48,3 +48,45 @@ public:
     return ans;
     }
 };
+
+
+//LEETCODE_290
+class Solution {
+public:
+    bool wordPattern(string pattern, string s) {
+        unordered_map<char, string>hm1;
+        unordered_map<string, char> hm2;
+
+        stringstream ss(s);
+        vector<string>words;
+
+        string word;
+
+        while(ss >> word){
+            words.push_back(word);
+        }
+
+        if(pattern.size() != words.size())
+        return false;
+
+        for(int i=0; i<pattern.size(); i++){
+            if(hm1.count(pattern[i])){
+                if(hm1[pattern[i]] != words[i])
+                return false;
+            }
+            
+            if(hm2.count(words[i])){
+                if(hm2[words[i]] != pattern[i])
+                return false;
+            }
+
+
+            hm1[pattern[i]] = words[i];
+            hm2[words[i]] = pattern[i]; 
+        } ;
+        return true;
+        
+    
+        
+    }
+};
