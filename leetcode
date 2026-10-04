@@ -171,3 +171,20 @@ public:
         return temp;    
     }   
 };
+//LEETCODE_217
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_set<int> hs;
+
+        for(int x : nums) {
+            if(hs.count(x)) {
+                return true;
+        }
+
+            hs.insert(x);
+        }
+
+    return false;
+    }
+};
