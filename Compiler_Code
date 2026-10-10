@@ -166,3 +166,90 @@ int main(){
     
     return 0;
 }
+//Prefix sum
+
+#include<bits/stdc++.h>
+using  namespace std;
+
+class Solution{
+    public:
+        vector<int> prefix_sum(vector<int>arr){
+            int n= arr.size();
+            
+            vector<int>prefix(n);
+            prefix[0] = arr[0];
+            
+            for(int i=1;i<n;i++){
+                prefix[i] = prefix[i-1]+arr[i];
+               
+            }
+            return prefix;
+        }
+
+};
+int main(){
+    int n;
+    cin>>n;
+    
+    vector<int>arr(n);
+    
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    
+    Solution obj;
+    vector<int>ans = obj.prefix_sum(arr);
+    
+    for(int i=0; i<ans.size();i++){
+        cout<<ans[i]<<" ";
+    }
+    
+    
+    cout<<endl;
+    
+    
+    
+    return 0;
+}
+
+//Suffix Sum
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        vector<int> Suffix_sum(vector<int>arr){
+            vector<int>suffix(arr.size());
+            int n = arr.size();
+            suffix[n-1] = arr[n-1];
+            
+                for(int i=n-1; i>=0; i--){
+                    suffix[i]= suffix[i+1] + arr[i] ;
+                }
+                return suffix;
+            }
+        
+};
+
+int main(){
+    int n;
+    cin>>n;
+    
+    vector<int> arr(n);
+    
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    
+    Solution obj;
+    vector<int>ans = obj.Suffix_sum(arr);
+    
+    for(int i=0; i<n; i++){
+        cout<<ans[i]<<" ";
+    }
+    
+    cout<<endl;
+    
+    
+    return 0;
+}
