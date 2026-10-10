@@ -44,3 +44,83 @@ int main(){
     
     return 0;
 }
+
+//Max dif between 2 elements
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        int MaxDiff(vector<int> arr){
+            int maxdiff = INT_MIN;
+            for(int i=0; i<arr.size(); i++){
+                int Diff;
+                for(int j=i; j<arr.size(); j++){
+                    Diff = abs(arr[i]-arr[j]);
+                    maxdiff = max(maxdiff, Diff);
+                }
+            }
+        
+        return maxdiff;
+    }
+};
+int main(){
+    Solution obj;
+    
+    int n;
+    cin>>n;
+    
+    vector<int>arr(n);
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    
+    cout<<obj.MaxDiff(arr)<<endl;
+    
+    
+    
+    
+    return 0;
+}
+
+//Largest sum contiguous subarray
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        int Largest_Sum(vector<int> arr){
+            int max_sum = INT_MIN;
+            
+            int n = arr.size();
+            for(int i=0; i<n; i++){
+                int sum=0;
+                for(int j=i; j<n;j++){
+                    sum += arr[j];
+                    
+                }
+                max_sum = max(max_sum, sum); 
+                
+            }
+            return max_sum;
+        }
+};
+
+int main(){
+    int n;
+    cin>>n;
+    
+    vector<int>arr(n);
+    
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    Solution obj;
+    int ans = obj.Largest_Sum(arr);
+    cout<<ans;
+    
+    
+    
+    return 0;
+    
+}
