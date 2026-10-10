@@ -124,3 +124,45 @@ int main(){
     return 0;
     
 }
+//Divide the array in 2 subarray with eqqual sum
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        bool Divide_Array_in_Subarray(vector<int>arr){
+            
+            for(int i=0; i<arr.size(); i++){
+                int sum1=0, sum2 = 0;
+                for(int j=0 ; j<i; j++){
+                    sum1 += arr[j]; 
+                }
+                for(int j=i; j<arr.size()-1; j++){
+                    sum2 += arr[j];
+                }
+                if(sum1 == sum2)
+                return 1;
+                
+            }
+            return {};
+            
+        }
+};
+int main(){
+    int n;
+    cin>>n;
+    
+    vector<int>arr(n);
+    
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    
+    Solution obj;
+    int ans = obj.Divide_Array_in_Subarray(arr);
+    cout<<ans;
+    
+    
+    return 0;
+}
