@@ -313,3 +313,55 @@ int main(){
     
     
 }
+//Candey Store
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+    
+        pair<int, int> Candy_Store(int candies[], int N, int k){
+            int max_cost = 0, min_cost = 0;
+            
+            sort(candies, candies+N);
+            int start = N-1, end = 0;
+            while(start >= end){
+                    max_cost += candies[start];
+                    start--;
+                    end+=k;
+                    
+            }
+            
+            start = 0, end = N-1;
+            while(start < end){
+                min_cost += candies[start];
+                start++;
+                end -= k;
+            
+            }
+                
+            return {min_cost, max_cost};
+            
+        }
+};
+
+int main(){
+    
+    int N;
+    cin>>N;
+    
+    int candies[N];
+    
+    for(int i=0; i<N;i++)
+    cin>>candies[i];
+    
+    int k;
+    cin>>k;
+    
+    Solution obj;
+    
+    pair<int, int> ans = obj.Candy_Store(candies,N,k);
+    cout<< ans.first<<" "<<ans.second<<endl;
+    
+    return 0;
+}
