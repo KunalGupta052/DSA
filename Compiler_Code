@@ -683,3 +683,62 @@ int main(){
     return 0;
 }
 
+
+//Trapping rain water
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int trap(vector<int>& height) {
+
+        int n = height.size();
+
+        vector<int>leftMax(n);
+        vector<int>rightMax(n);
+
+        int Maxi = INT_MIN;
+        int Water = 0;
+
+        for(int i=0; i<n; i++){
+            Maxi = max(Maxi, height[i]);
+            leftMax[i] = Maxi;
+        }
+
+        Maxi = INT_MIN;
+
+        for(int i=n-1; i>=0; i--){
+            Maxi = max(Maxi, height[i]);
+            rightMax[i] = Maxi;
+        }
+
+        for(int i=0; i<n; i++){
+            int Miniheight = min(leftMax[i], rightMax[i]);
+            if(Miniheight >= 0){
+                Water += Miniheight - height[i];
+            }
+
+         }
+         return Water;
+
+    }
+};
+
+int main(){
+    int n;
+    cin>>n;
+    
+    vector<int>height(n);
+    
+    for(int i=0; i<n; i++){
+        cin>>height[i];
+    }
+    
+    Solution obj;
+    
+    cout<<obj.trap(height);
+    
+    
+    
+    return 0;
+}
