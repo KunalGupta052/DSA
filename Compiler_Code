@@ -742,3 +742,160 @@ int main(){
     
     return 0;
 }
+//Add_2_Matrix
+
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+    void Add_2_Matix(int n){
+        
+        vector<vector<int>> Mat1(n, vector<int>(n));
+        vector<vector<int>> Mat2(n, vector<int>(n));
+        vector<vector<int>> ans(n, vector<int>(n));
+        
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                
+                cin>>Mat1[i][j];
+            }
+        }
+        
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                
+                cin>>Mat2[i][j];
+            }
+        }
+        
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                ans[i][j] = Mat1[i][j] + Mat2[i][j];
+            }
+        }
+        
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n;j++){
+                cout<<ans[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+        
+    }
+};
+
+int main()
+{
+    int n;
+    cin>>n;
+    
+    
+        
+        Solution obj;
+        obj.Add_2_Matix(n);
+    
+
+    return 0;
+}
+
+//Print row index with maximum sum 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+    int Print_row_index(vector<vector<int>>&Mat, int n){
+        
+        int Max_sum=INT_MIN;
+        int index;
+        
+        for(int i=0;i<n;i++){
+            int sum =0;
+            for(int j=0; j<n; j++){
+                sum += Mat[i][j];
+                Max_sum = max(Max_sum, sum);
+                index = i;
+            }
+        }
+        return index;
+    }
+};
+int main(){
+    int n;
+    cin>>n;
+    
+    vector<vector<int>> Mat(n, vector<int>(n));
+    
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            cin>>Mat[i][j];
+        }
+    }
+    
+    Solution obj;
+    
+    cout<<obj.Print_row_index(Mat, n);
+    
+    
+    return 0;
+}
+
+//Print Sum of diagonal element
+
+//sum of diagonal element
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        int diagonalSum(vector<vector<int>>& Mat, int n){
+            
+            int first=0, second =0;
+            
+            for(int i=0; i<n; i++)
+                
+                first += Mat[i][i];
+            
+            for(int i=0, j=n-1 ;i<n; i++, j--)
+                second += Mat[i][j];
+            
+            
+            //To avoid the count of middle diagonal element to time 
+            if(n % 2 != 0)
+                second -= Mat[n/2][n/2];
+            
+            
+            
+            return first+second;
+        }
+};
+int main(){
+    
+    int n;
+    cin>>n;
+    
+    vector<vector<int>> Mat(n, vector<int>(n));
+    
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            cin>>Mat[i][j];    
+        }
+        
+    }
+    
+    Solution obj;
+    cout<<obj.diagonalSum(Mat,n);
+    
+    return 0;
+}
