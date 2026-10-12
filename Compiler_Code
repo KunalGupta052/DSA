@@ -1290,3 +1290,66 @@ int main(){
 }
 
 //270 ke liye 1 baar aur 90 degree
+//Rotate Matrix 90 degree AntiClockwise == Rotate Matrix 270 degree(90 + 90 + 90)
+
+// 1 time rotate krne ka mtlb hai 90 degree rotate krna
+// 2 time = 180
+// 3 time = 270
+// 4 time = 360
+
+//Rotate matrix by K times --> first find K%4
+
+
+//Insert An element in front
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+    void insert_from_front(vector<int> arr,int k){
+        
+        int n = arr.size();
+        
+        
+        
+        vector<int>temp(n+1);
+        
+        
+        temp[0] = (k);
+        
+        
+        int j=0;
+        
+        for(int i=1; i<temp.size(); i++){
+            
+            temp[i] = arr[j];
+            j++;
+        }
+        
+        for(int i=0; i<temp.size();i++){
+            cout<<temp[i]<<endl;
+        }
+
+    }
+};
+
+int main(){
+    
+    int n;
+    cin>>n;
+    
+    vector<int>arr(n);
+    
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    
+    int k;
+    cin>>k;
+    
+    Solution obj;
+    obj.insert_from_front(arr, k);
+    
+    return 0;
+}
