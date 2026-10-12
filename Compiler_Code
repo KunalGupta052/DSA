@@ -1091,3 +1091,118 @@ int main(){
     
     return 0;
 }
+
+
+//Transpose Transpose_Matrix
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        int Transpose_Matrix(vector<vector<int> >&Mat){
+            
+            int row = Mat.size();
+            int col = Mat[0].size();
+            
+            for(int i=0; i<row; i++){
+                for(int j=i+1; j<col; j++){
+                    swap(Mat[i][j], Mat[j][i]);
+                }
+            }
+            
+            for(int i=0; i<row; i++){
+                for(int j=0; j<col; j++){
+                    cout<<Mat[i][j]<<" ";
+                }
+                cout<<endl;
+            }
+            return 0;
+            
+            
+        }
+};
+int main(){
+  
+  int row;
+  cin>>row;
+  
+  int col;
+  cin>>col;
+  
+  int init_value=0;
+  
+  vector<vector<int> >Mat(row, vector<int>(col, init_value));
+  
+  for(int i=0; i<row; i++){
+      for(int j=0; j<col; j++){
+          cin>>Mat[i][j];
+      }
+  }
+    
+    Solution obj;
+    obj.Transpose_Matrix(Mat);
+    
+    return 0;
+}  
+
+//rotate matrix by 90 degree
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        int rotate_matrix_by_90(vector<vector<int> >&Mat){
+            
+            int row = Mat.size();
+            int col = Mat[0].size();
+            
+            for(int i=0; i<row;i++){
+                for(int j=i+1; j<col; j++){
+                    swap(Mat[i][j], Mat[j][i]);
+                }
+            }
+            
+            int start = 0 , end=col-1;
+             
+            while(start < end){
+                
+                for(int i=0;i<row; i++){
+                    
+                            swap(Mat[i][start],Mat[i][end]);
+   
+                }
+                 start++;
+                end--;
+            }
+            
+            for(int i=0; i<row; i++){
+                for(int j=0; j<col; j++){
+                    cout<<Mat[i][j]<<" ";
+                }
+                cout<<endl;
+            }
+            return 0;
+        }
+};
+
+int main(){
+    
+    int row;
+    cin>>row;
+    
+    int col;
+    cin>>col;
+    
+    int init_value=0;
+    vector<vector<int> >Mat(row, vector<int>(col, init_value));
+    
+    for(int i=0; i<row; i++){
+        for(int j=0; j<col; j++){
+            cin>>Mat[i][j];
+        }
+    }
+    
+    Solution obj;
+    obj.rotate_matrix_by_90(Mat);
+    return 0;
+}
