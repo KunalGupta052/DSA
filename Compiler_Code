@@ -899,3 +899,195 @@ int main(){
     
     return 0;
 }
+
+
+//How to print a Matrix
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        void Matrix(vector<vector<int> >&Mat){
+            
+        
+            int row = Mat.size();
+            int col = Mat[0].size();
+            
+            for(int i=0; i< row; i++){
+                for(int j=0; j<col; j++){
+                    cout<<Mat[i][j]<<" ";
+                }
+                cout<<endl;
+            }
+            
+        }
+};
+int main(){
+    int row;
+    cin>>row;
+    
+    int col;
+    cin>>col;
+    
+    int init_value = 0;
+    
+    vector<vector<int> >Mat(row, vector<int>(col,init_value));
+    
+    
+    for(int i=0; i< row; i++){
+                for(int j=0; j<col; j++){
+                    cin>>Mat[i][j];
+                }
+    }
+    
+    Solution obj;
+    obj.Matrix(Mat);
+    
+    
+    
+    return 0;
+}
+
+//Wave form
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+    
+        int Wave_form(vector<vector<int> >&Mat){
+            
+            int row = Mat.size();
+            int col = Mat[0].size();
+            
+            for(int j=0; j<col; j++){
+                if(j % 2 == 0){
+                    for(int i=0; i<row; i++){
+                        cout<<Mat[i][j]<<" ";
+                    }
+                    cout<<endl;
+                
+                    
+                }
+                else{
+                    for(int i=row-1; i>=0; i--){
+                        cout<<Mat[i][j]<<" ";
+                    }
+                    cout<<endl;
+                    
+                }
+                
+                
+            }
+           return 0;
+            
+        }
+};
+
+int main(){
+    
+    int row;
+    cin>>row;
+    
+    int col;
+    cin>>col;
+    
+    int init_value = 0;
+    
+    vector<vector<int> >Mat(row, vector<int>(col, init_value));
+    
+    for(int i=0; i<row; i++){
+        for(int j=0; j<col; j++){
+            cin>>Mat[i][j];
+            
+        }
+        
+    }
+    
+    Solution obj;
+    obj.Wave_form(Mat);
+    
+    return 0;
+}
+
+//Spiral Form
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        int Spiral_form(vector<vector<int> >&Mat){
+            
+            int row = Mat.size();
+            int col = Mat[0].size();
+            
+            int top = 0;
+            int right = col-1;
+            int left = 0;
+            int bottom = row-1;
+            
+            while(top<=bottom && left<=right){
+                
+                for(int j=left; j<=right; j++){
+                    cout<<Mat[top][j]<<" ";  
+                }
+               
+                top++;
+                 
+                
+                for(int j=top; j<=bottom; j++){
+                    cout<<Mat[j][right]<<" ";
+                    
+                }
+                
+                right--;
+               
+                
+                for(int j=right; j>=left; j--){
+                    cout<<Mat[bottom][j]<<" ";
+                    
+                }
+                
+                bottom--;
+               
+                
+                for(int j=bottom; j>=top; j--){
+                    cout<<Mat[j][left]<<" ";
+                    
+                }
+                
+                left++;
+        
+            }
+             
+           
+            
+            return 0;
+            
+        }
+    
+};
+
+int main(){
+    
+    int row;
+    cin>>row;
+    
+    int col;
+    cin>>col;
+    
+    int init_value=0;
+    
+    vector<vector<int> >Mat(row, vector<int>(col, init_value));
+    
+    for(int i=0;i<row;i++){
+        for(int j=0; j<col; j++){
+            cin>>Mat[i][j];
+        }
+    }
+    
+    Solution obj;
+    obj.Spiral_form(Mat);
+    
+    return 0;
+}
