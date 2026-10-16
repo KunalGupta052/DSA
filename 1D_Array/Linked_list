@@ -57,3 +57,44 @@ class LinkedList{
     
 }
 
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Node{
+  public:
+    int data;
+    Node* next;
+    
+    Node(int data){
+        this->data = data;
+        next = nullptr;
+        
+    }
+};
+
+
+int main()
+{
+    int a = 5;
+    int *b = new int(6);
+    int c = new int(7);
+    
+    cout<<a<<endl;
+    cout<<*b<<endl;
+    cout<<c<<endl;
+    
+    // Node* n1 = new Node(10);
+    // cout<<n1->data;
+    
+    
+
+    return 0;
+}
