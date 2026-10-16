@@ -1,0 +1,59 @@
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class Node{
+//     public:
+//     int data;
+//     Node *next;
+    
+//     Node(int value){
+//         data = val;
+//         next =  nullptr;
+        
+        
+//     }
+// };
+// int main() {
+// 	// your code goes here
+// 	int n;
+// 	cin>>n;
+// 	Node* head;
+// 	Node* tail;
+	
+    
+//     Node *n1 = new Node(10);
+//     n1->next = new Node(20);
+//     n1->next->next = new Node(30);
+//     n1->next->next-> = new Node(40);
+//     n1->next->
+    
+//     Node* temp = n1;
+    
+
+// }
+
+
+
+#inlcude<bits/stdc++.h>
+using namespace std;
+
+class Node{
+    public:
+    int data;
+    Node* next;
+    Node(int val){
+        data = val;
+        next = nullptr;
+        
+    }
+};
+
+class LinkedList{
+    private:
+    Node* head =NULL;
+    Node* tail = NULL;
+    public:
+    void insretATTail(int Node)
+    
+}
+
