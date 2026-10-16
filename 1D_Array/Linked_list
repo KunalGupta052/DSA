@@ -98,3 +98,117 @@ int main()
 
     return 0;
 }
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Node{
+  public:
+    int data;
+    Node* next;
+    
+    Node(int data){
+        this->data = data;
+        next = nullptr;
+        
+    }
+};
+
+
+int main()
+{   
+    //Allocate memory in stack
+    Node n1 = 5;
+    Node n2(6);
+   
+    
+    
+    //Create obj like a normal variable and they behave like a variable.
+    // int a = 5;
+    // int d(5);
+    
+    //Allocate memory in heap
+    Node* n3 = new Node(7);
+    Node* n4 = new Node(8);
+    Node* n5 = new Node(10);
+    
+    
+    // int *b = new int(6);
+    // int *c = new int(7);
+    // int *e = &a;
+    
+    // cout<<a<<endl;
+    // cout<<*b<<endl;
+    // cout<<c<<endl;
+    // cout<<*c<<endl;
+    // cout<<d<<endl;
+    // cout<<d<<endl;
+    
+    cout<<n1.data<<endl;
+    cout<<n2.data<<endl;
+    cout<<n3->data<<endl;
+    cout<<n4->data<<endl;
+    
+    n3->next = n4;
+    cout<<n3->next->data<<endl;
+    
+    n5->next = n3;
+    cout<<n5->next->data<<endl;
+    
+    // cout<<n1.next->data<<endl;
+    // cout<<n2.next->data<<endl;
+    
+    
+    
+    
+    // Node* n1 = new Node(10);
+    // cout<<n1->data;
+    
+    
+
+    return 0;
+}
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+    void insert_from_front(vector<int> arr, int k){
+        
+        int n = arr.size();
+        
+        // while(k>0){
+        //      arr.pop_back();
+        // }
+
+        for(int i=0; i<n-1; i++){
+            cout<<arr[i]<<endl;
+        }
+        
+
+    }
+};
+
+int main(){
+    
+    int n;
+    cin>>n;
+    
+    vector<int>arr(n);
+    
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    
+    int k;
+    cin>>k;
+    
+    
+    Solution obj;
+    obj.insert_from_front(arr, k);
+    
+    return 0;
+}
